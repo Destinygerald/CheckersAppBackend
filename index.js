@@ -2,8 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const app = express();
-const server = require('http').createServer(app);
-const uuid = require("uuid");
+const server = require('http').createServer(app)
 const { findSession, saveSession } = require('./helpers/SessionStorage.js');
 
 const io = require('socket.io')(server, { cors: { origin: "*", credentials: true } });
